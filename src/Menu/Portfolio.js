@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Title from './Title';
+
 class Portfolio extends React.Component{
     constructor(props){
         super(props);
@@ -9,7 +11,10 @@ class Portfolio extends React.Component{
 
     render(){
         return( 
-        <div>Portfolio!</div>
+            <div>
+            <Title heading={window.location.pathname}/>
+            My Portfolio
+        </div>
         );
     }
 }

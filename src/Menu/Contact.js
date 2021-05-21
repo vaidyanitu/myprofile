@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Title from './Title';
+
 class Contact extends React.Component{
     constructor(props){
         super(props);
@@ -9,7 +11,10 @@ class Contact extends React.Component{
 
     render(){
         return( 
-        <div>Contact!</div>
+            <div>
+            <Title heading={window.location.pathname} subheader="Get in Touch"/>
+            My Contact
+        </div>
         );
     }
 }

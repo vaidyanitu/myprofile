@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Title from './Title';
+
 class Resume extends React.Component{
     constructor(props){
         super(props);
@@ -8,8 +10,11 @@ class Resume extends React.Component{
     }
 
     render(){
-        return( 
-        <div>Resume!</div>
+        return(        
+        <div>
+            <Title heading={window.location.pathname} subheader="4+ years of experience"/>
+            My Resume
+        </div>
         );
     }
 }

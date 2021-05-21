@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navmenu from './Menu/Nav';
 import About from './Menu/About';
@@ -7,20 +6,17 @@ import Portfolio from './Menu/Portfolio';
 import Contact from './Menu/Contact';
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 
-
+//For dynamic routing
 const menulist=[{name:"About",component:About},
 {name:"Resume",component:Resume},
 {name:"Portfolio",component:Portfolio},
 {name:"Contact",component:Contact},
 ];
-const components=[About,Resume,Portfolio,Contact]
+
 const routes =[];
 menulist.forEach(item=>routes.push({path:"/"+item.name,comp:item.component}));
-console.log(routes);
 const routeComponents = routes.map(({path, comp}, key) => <Route path={path} component={comp} key={key} />);
-console.log(routeComponents);
-       
-     
+         
 
 function App() {  
 
@@ -28,7 +24,10 @@ function App() {
     <Router>
     <div>
             <Navmenu name="Nitu Vaidya" menu={menulist.map(x=>x.name)}/>
-        
+              
+            
+
+              
               <Switch>
               <Route exact component={About} path="/" />
               {/* <Route  component={Resume} path="/Resume" />
