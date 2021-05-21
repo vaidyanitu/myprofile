@@ -1,24 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
+import Navmenu from './Menu/Nav';
+import About from './Menu/About';
+import Resume from './Menu/Resume';
+import Portfolio from './Menu/Portfolio';
+import Contact from './Menu/Contact';
+import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 
-function App() {
+
+const menulist=[{name:"About",component:About},
+{name:"Resume",component:Resume},
+{name:"Portfolio",component:Portfolio},
+{name:"Contact",component:Contact},
+];
+const components=[About,Resume,Portfolio,Contact]
+const routes =[];
+menulist.forEach(item=>routes.push({path:"/"+item.name,comp:item.component}));
+console.log(routes);
+const routeComponents = routes.map(({path, comp}, key) => <Route path={path} component={comp} key={key} />);
+console.log(routeComponents);
+       
+     
+
+function App() {  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <div>
+            <Navmenu name="Nitu Vaidya" menu={menulist.map(x=>x.name)}/>
+        
+              <Switch>
+              <Route exact component={About} path="/" />
+              {/* <Route  component={Resume} path="/Resume" />
+              <Route  component={About} path="/About" />  */}
+               {routeComponents}
+                {/* <Route exactly component={Page1} pattern="/path1" />
+                <Route exactly component={Page2} pattern="/path2" />
+                <Route exactly component={Page3} pattern="/path3" />
+                <Route component={Page404} /> */}
+              </Switch>
+            </div>
+            </Router>
   );
 }
 
