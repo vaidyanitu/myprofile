@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from './Title';
 
-class Portfolio extends React.Component{
+class Projects extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -13,9 +13,9 @@ class Portfolio extends React.Component{
         return( 
             <div>
             <Title heading={window.location.pathname}/>
-            My Portfolio
+            My Projects
         </div>
         );
     }
 }
-export default Portfolio;
+export default Projects;

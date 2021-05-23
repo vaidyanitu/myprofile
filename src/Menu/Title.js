@@ -1,11 +1,7 @@
 import React from 'react';
 import { Accordion, Card} from 'react-bootstrap';
 class Title extends React.Component{
-    constructor(props){
-        super(props);
-       
-    }
-
+    
     render(){
         return(                 
             <div>

@@ -2,14 +2,14 @@ import './App.css';
 import Navmenu from './Menu/Nav';
 import About from './Menu/About';
 import Resume from './Menu/Resume';
-import Portfolio from './Menu/Portfolio';
+import Projects from './Menu/Projects';
 import Contact from './Menu/Contact';
 import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 
 //For dynamic routing
 const menulist=[{name:"About",component:About},
 {name:"Resume",component:Resume},
-{name:"Portfolio",component:Portfolio},
+{name:"Projects",component:Projects},
 {name:"Contact",component:Contact},
 ];
 
@@ -24,10 +24,6 @@ function App() {
     <Router>
     <div>
             <Navmenu name="Nitu Vaidya" menu={menulist.map(x=>x.name)}/>
-              
-            
-
-              
               <Switch>
               <Route exact component={About} path="/" />
               {/* <Route  component={Resume} path="/Resume" />
