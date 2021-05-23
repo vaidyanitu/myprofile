@@ -12,3 +12,27 @@ code {
     monospace;
 }
 
+.buttonoval {border-radius: 20px;}
+
+.mycardheader {
+  background-color:#fff;
+  border-bottom: 0px !important;
+}
+
+.mycard{
+  border:0px !important;
+}
+
+.mycardbody{
+  padding:0px;
+}
+
+.borderless-list-group-item {
+  border:0px !important;
+}
+
+.resumebutton{
+  font-size: 11px !important;
+  color:'black' !important; 
+  border-radius: 20px; 
+}
