@@ -9,7 +9,7 @@ class About extends React.Component{
           
           <div className="row flex-v-align">
           <div className='col-sm-5'>
-            <img src='./mpic.jpg' alt='logo' className='photo'/>
+            <img src={process.env.PUBLIC_URL + '/mpic.jpg'} alt='logo' className='photo'/>
           </div>
             <div className='col-sm-7'>
               <div className="home-text hp-left">

@@ -4,7 +4,7 @@ import About from './Menu/About';
 import Resume from './Menu/Resume';
 import Projects from './Menu/Projects';
 import Contact from './Menu/Contact';
-import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router,Switch, Route, Redirect } from 'react-router-dom';
 
 //For dynamic routing
 const menulist=[{name:"About",component:About},
@@ -25,6 +25,8 @@ function App() {
     <div>
             <Navmenu name="Nitu Vaidya" menu={menulist.map(x=>x.name)}/>
               <Switch>
+                <Redirect exact from="/" to="/About" />
+                <Redirect exact from="/myprofile" to="/About" />
               <Route exact component={About} path="/" />
               {/* <Route  component={Resume} path="/Resume" />
               <Route  component={About} path="/About" />  */}
