@@ -25,7 +25,6 @@ function App() {
     <div>
             <Navmenu name="Nitu Vaidya" menu={menulist.map(x=>x.name)}/>
               <Switch>
-                <Redirect exact from="/" to="/About" />
                 <Redirect exact from="/myprofile" to="/About" />
               <Route exact component={About} path="/" />
               {/* <Route  component={Resume} path="/Resume" />

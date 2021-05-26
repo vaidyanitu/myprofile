@@ -24,7 +24,7 @@ class Navmenu extends React.Component{
 
      menuitems=this.props.menu.map((item)=>
      <LinkContainer key={"Link"+item} to={"/"+item}>
-         <Nav.Link style={{margin:"5px"}}>{item}</Nav.Link>
+         <Nav.Link activeClassName='is-active' style={{margin:"5px"}}>{item}</Nav.Link>
     </LinkContainer>       
     );
 
@@ -35,7 +35,7 @@ class Navmenu extends React.Component{
     render(){
         return(
             <Navbar style={{margin:20}}>
-            <Navbar.Brand href="/">
+            <Navbar.Brand href="/About">
                 <img
                     alt=""
                     src={logo}
@@ -44,7 +44,7 @@ class Navmenu extends React.Component{
                 />{' '}
                 {this.props.name}
                 </Navbar.Brand>
-                <Nav className="justify-content-end" style={{ width: "85%" }} activeKey={window.location.pathname}> 
+                <Nav className="justify-content-end" style={{ width: "85%" }} > 
                 <NavItem><NavLink></NavLink></NavItem>                         
                    {this.menuitems}
                 </Nav>            

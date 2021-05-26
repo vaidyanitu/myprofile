@@ -1,6 +1,5 @@
 import React from 'react';
-// import logo from '../logo.svg';
-
+import mpic from '../mpic.JPG';
 
 class About extends React.Component{
     
@@ -9,7 +8,9 @@ class About extends React.Component{
           
           <div className="row flex-v-align">
           <div className='col-sm-5'>
-            <img src={process.env.PUBLIC_URL + '/mpic.jpg'} alt='logo' className='photo'/>
+            
+            <img src={mpic} alt='logo' className='photo'/>
+            
           </div>
             <div className='col-sm-7'>
               <div className="home-text hp-left">
