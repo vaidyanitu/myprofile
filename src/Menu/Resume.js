@@ -44,6 +44,19 @@ var educationlist=education.map(data=>(
 ))
 
 var work=[
+	{
+        StartYear:'2021',
+        EndYear:'Current',
+        Duration:'',       
+        Organization:'Deerwalk Services',
+        Designation:'Software Engineer',
+        Departments:'Valley Project',
+        WorkDetails:[
+            'Created Technical Design Documents and gave presentations.',
+            'Added Modules to existing Healthplan Application and performed bug fixes',
+			'Tools Used: Vb.net, MS Sql, Sql Profiler'
+            ]
+    },
     {
         StartYear:'2019',
         EndYear:'2021',
